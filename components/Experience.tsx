@@ -114,7 +114,7 @@ const Experience = () => {
           <div key={index} className='grid grid-cols-12 xl:mr-14 mx-6'>
             <div className={`col-span-12 ${item.half ? 'xl:col-span-4' : 'xl:col-span-8'}`}>
               <Image
-                src={`/Aleksandra-Klinska-CV${item.image}`}
+                src={`${item.image}`}
                 alt={item.title}
                 width={10000}
                 height={10000}
@@ -125,11 +125,11 @@ const Experience = () => {
             <div className='col-span-12 xl:col-span-4 break-words mb-16 xl:mb-32'>
               <h1
                 className={`text-3xl xl:text-6xl text-gray font-extrabold uppercase tracking-[-1px]
-                 xl:leading-[86px] leading-[64px] ${hoveredIndex === index ? 'text-red' : ''}`}
+                 xl:leading-[64px] leading-[64px] ${hoveredIndex === index ? 'text-red' : ''}`}
               >
                 {item.title}
               </h1>
-              <p className='text-xs text-gray'>{item.description}
+              <p className='text-xs text-gray xl:ml-1'>{item.description}
               </p>
               <div className=''>
                 <BsArrow90DegRight
