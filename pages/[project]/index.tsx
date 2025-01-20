@@ -50,7 +50,7 @@ const ProjectPage = ({ params }: { params: { project: string } }) => {
 
           return (
             <Image
-              src={image || "/placeholder.svg"}
+              src={`/Aleksandra-Klinska-CV${image}` || "/placeholder.svg"}
               alt={image}
               width={1400}
               height={1000}
