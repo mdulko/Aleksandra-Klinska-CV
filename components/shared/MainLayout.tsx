@@ -7,7 +7,7 @@ type MainLayoutProps = {
 }
 
 const MainLayout = ({ children }: MainLayoutProps) => (
-  <div className="bg-background">
+  <div className="bg-background text-pureWhite">
     <ProjectProvider>
       {children}
     </ProjectProvider>
