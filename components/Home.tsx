@@ -39,7 +39,7 @@ const Home = () => {
 
           <div className="relative w-64 h-64 mx-auto overflow-hidden rounded-full mb-40">
             <Image
-              src="/images/ola_1.png"
+              src="/Aleksandra-Klinksa-CV/images/ola_1.png"
               alt="Profile"
               fill
               className="object-cover grayscale"
