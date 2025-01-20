@@ -49,7 +49,7 @@ const Experience = () => {
     },
     {
       image: '/notes.png',
-      title: 'BYTESPACE, NOTEBOARD, ARTBOARD',
+      title: 'BYTESPACE, NOTEBOARD',
       description: 'A suite of three applications: a note-taking board, a drawing board and a file storage area.',
       link: '',
       images: ['/notes_1.png', "/notes_2.png", "/notes_3.png"]
@@ -98,7 +98,7 @@ const Experience = () => {
 
   return (
     <div className='flex flex-col items-center'>
-      <h1 className='text-6xl text-gray font-extrabold uppercase tracking-[-1px] leading-[86px]'>Experience</h1>
+      <h1 className='xl:text-6xl text-3xl text-gray font-extrabold uppercase tracking-[-1px] leading-[86px]'>Experience</h1>
       <ul className="flex flex-wrap justify-center text-xs text-gray uppercase mb-12">
         {navItems.map((item, index) => (
           <li key={item}>
@@ -111,7 +111,7 @@ const Experience = () => {
       </ul>
       <div>
         {projects.map((item, index) => (
-          <div key={index} className='grid grid-cols-12 mr-14'>
+          <div key={index} className='grid grid-cols-12 xl:mr-14 mx-6'>
             <div className={`col-span-12 ${item.half ? 'xl:col-span-4' : 'xl:col-span-8'}`}>
               <Image
                 src={`/Aleksandra-Klinska-CV${item.image}`}
@@ -122,10 +122,10 @@ const Experience = () => {
                 className="object-cover relative block"
               />
             </div>
-            <div className='col-span-12 xl:col-span-4 break-words mb-32'>
+            <div className='col-span-12 xl:col-span-4 break-words mb-16 xl:mb-32'>
               <h1
-                className={`text-6xl text-gray font-extrabold uppercase tracking-[-1px]
-                 leading-[86px] ${hoveredIndex === index ? 'text-red' : ''}`}
+                className={`text-3xl xl:text-6xl text-gray font-extrabold uppercase tracking-[-1px]
+                 xl:leading-[86px] leading-[64px] ${hoveredIndex === index ? 'text-red' : ''}`}
               >
                 {item.title}
               </h1>

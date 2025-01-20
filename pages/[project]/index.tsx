@@ -29,11 +29,11 @@ const ProjectPage = ({ params }: { params: { project: string } }) => {
         <Navigation/>
         <div className="container mx-auto px-4 mt-24">
           <h1 className="text-center">
-            <span className="text-gray text-[64px] font-extrabold tracking-wider uppercase">{selectedProject.title}</span>
+            <span className="text-gray text-3xl xl:text-[64px] font-extrabold tracking-wider uppercase">{selectedProject.title}</span>
           </h1>
-          <p className='text-xs text-gray w-[520px] mx-auto mb-24 text-justify'>{selectedProject.description}</p>
+          <p className='text-xs text-gray w-auto xl:w-[520px] mb-24 text-justify mt-4 mx-6 xl:mx-auto'>{selectedProject.description}</p>
         </div>
-        <div className='mx-60'>
+        <div className='xl:mx-60'>
           <Image
             src={`/Aleksandra-Klinska-CV${selectedProject?.image}` || "/placeholder.svg"}
             alt={selectedProject.title}
@@ -45,7 +45,7 @@ const ProjectPage = ({ params }: { params: { project: string } }) => {
         </div>
       </header>
 
-      <div className='bg-pureWhite px-60 py-48'>
+      <div className='bg-pureWhite px-4 xl:px-60 py-12 xl:py-48'>
         {selectedProject.images?.map((image, index) => {
 
           return (
@@ -55,7 +55,7 @@ const ProjectPage = ({ params }: { params: { project: string } }) => {
               width={1400}
               height={1000}
               style={{height: 'auto'}}
-              className="object-cover pb-48 mx-auto"
+              className="object-cover pb-12 xl:pb-48 mx-auto"
               key={index + image}
             />
           )
