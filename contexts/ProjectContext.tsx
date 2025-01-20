@@ -4,7 +4,8 @@ interface Project {
   title: string
   description: string
   image: string
-  half?: boolean
+  half?: boolean,
+  images?: string[],
 }
 
 interface ProjectContextType {

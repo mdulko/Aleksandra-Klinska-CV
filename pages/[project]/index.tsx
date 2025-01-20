@@ -7,6 +7,8 @@ import { BsArrow90DegUp } from "react-icons/bs";
 
 const ProjectPage = ({ params }: { params: { project: string } }) => {
 
+  console.log(params);
+
   const router = useRouter()
   const { selectedProject } = useProjectContext()
 
@@ -44,7 +46,7 @@ const ProjectPage = ({ params }: { params: { project: string } }) => {
       </header>
 
       <div className='bg-pureWhite px-60 py-48'>
-        {selectedProject.images.map((image, index) => {
+        {selectedProject.images?.map((image, index) => {
 
           return (
             <Image
