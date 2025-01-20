@@ -35,7 +35,7 @@ const ProjectPage = ({ params }: { params: { project: string } }) => {
         </div>
         <div className='mx-60'>
           <Image
-            src={`/Aleksandra-Klinska-CV${selectedProject.image}` || "/placeholder.svg"}
+            src={`/Aleksandra-Klinska-CV${selectedProject?.image}` || "/placeholder.svg"}
             alt={selectedProject.title}
             width={1000}
             height={1000}
