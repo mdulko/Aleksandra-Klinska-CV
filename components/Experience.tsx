@@ -114,7 +114,7 @@ const Experience = () => {
           <div key={index} className='grid grid-cols-12 xl:mr-14 mx-6'>
             <div className={`col-span-12 ${item.half ? 'xl:col-span-4' : 'xl:col-span-8'}`}>
               <Image
-                src={`${item.image}`}
+                src={`/Aleksandra-Klinska-CV${item.image}`}
                 alt={item.title}
                 width={10000}
                 height={10000}
