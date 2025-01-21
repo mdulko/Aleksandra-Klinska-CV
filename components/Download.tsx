@@ -3,7 +3,7 @@ import { Download } from 'lucide-react'
 export default function DownloadCVButton() {
   const handleDownload = () => {
     // Replace this URL with your actual CV file URL
-    const cvUrl = '/path-to-your-cv.pdf'
+    const cvUrl = '/Aleksandra-Klinska-CV/CV_2025_Aleksandra_Klinska_EN.pdf'
 
     // Create a temporary anchor element
     const link = document.createElement('a')
