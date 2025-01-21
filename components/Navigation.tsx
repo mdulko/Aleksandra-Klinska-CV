@@ -1,6 +1,6 @@
-'use client'
-
 import Link from 'next/link'
+import {useEffect, useRef} from "react";
+
 
 interface NavItem {
   label: string
@@ -8,25 +8,45 @@ interface NavItem {
   href: string
 }
 
-const navItems: NavItem[] = [
-  {
-    label: 'ABOUT',
-    number: '01',
-    href: '/',
-  },
-  {
-    label: 'PORTFOLIO',
-    number: '02',
-    href: '/',
-  },
-  {
-    label: 'CONTACT',
-    number: '03',
-    href: '/',
-  },
-]
 
-export default function Navigation() {
+
+interface NavigationProps {
+  navItems: NavItem[]
+  onSectionChange: (section: string) => void
+}
+
+
+export default function Navigation({ navItems, onSectionChange }: NavigationProps) {
+  const refs = useRef<{ [key: string]: HTMLLIElement | null }>({})
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            onSectionChange(entry.target.id)
+          }
+        })
+      },
+      { threshold: 0.5 },
+    )
+
+    Object.values(refs.current).forEach((ref) => {
+      if (ref) observer.observe(ref)
+    })
+
+    return () => observer.disconnect()
+  }, [onSectionChange])
+
+  const scrollToSection = (href: string) => {
+    const sectionId = href.replace("#", "")
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+
   return (
     <nav className="p-4">
       <div className="max-w-screen-xl mx-auto mt-8">
@@ -36,6 +56,10 @@ export default function Navigation() {
               <Link
                 href={item.href}
                 className="flex items-center text-gray hover:text-white transition-colors group"
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToSection(item.href)
+                }}
               >
                 <span className="absolute -left-6 top-[15%] -translate-y-1/2 text-xs font-light opacity-50 group-hover:opacity-100 transition-opacity transform -rotate-90 origin-right">
                   {item.number}

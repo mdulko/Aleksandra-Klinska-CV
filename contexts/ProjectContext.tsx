@@ -6,6 +6,8 @@ interface Project {
   image: string
   half?: boolean,
   images?: string[],
+  size?: string,
+  links?: string[]
 }
 
 interface ProjectContextType {
