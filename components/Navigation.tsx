@@ -53,19 +53,32 @@ export default function Navigation({ navItems, onSectionChange }: NavigationProp
         <ul className="flex items-center justify-center space-x-8">
           {navItems.map((item) => (
             <li key={item.label} className="relative">
-              <Link
-                href={item.href}
-                className="flex items-center text-gray hover:text-white transition-colors group"
-                onClick={(e) => {
-                  e.preventDefault()
-                  scrollToSection(item.href)
-                }}
-              >
-                <span className="absolute -left-6 top-[15%] -translate-y-1/2 text-xs font-light opacity-50 group-hover:opacity-100 transition-opacity transform -rotate-90 origin-right">
+              {item.label === "ABOUT" ?
+                <Link
+                  href={item.href}
+                  rel="noopener noreferrer"
+                  className="flex items-center text-gray transition-colors group"
+                >
+                <span className="absolute -left-6 top-[15%] -translate-y-1/2 text-xs text-gray font-light group-hover:opacity-100 transition-opacity transform -rotate-90 origin-right">
                   {item.number}
                 </span>
-                <span className="text-sm font-medium tracking-wider">{item.label}</span>
-              </Link>
+                  <span className="text-sm font-medium hover:text-red tracking-wider">{item.label}</span>
+                </Link>
+              :
+                <Link
+                  href={item.href}
+                  className="flex items-center text-gray transition-colors group"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection(item.href)
+                  }}
+                >
+                <span className="absolute -left-6 top-[15%] -translate-y-1/2 text-xs text-gray font-light group-hover:opacity-100 transition-opacity transform -rotate-90 origin-right">
+                  {item.number}
+                </span>
+                  <span className="text-sm font-medium hover:text-red tracking-wider">{item.label}</span>
+                </Link>
+              }
             </li>
           ))}
         </ul>

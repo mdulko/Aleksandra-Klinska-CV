@@ -22,7 +22,7 @@ const Home = () => {
     {
       label: 'ABOUT',
       number: '01',
-      href: '#about',
+      href: '/',
     },
     {
       label: 'PORTFOLIO',
@@ -100,22 +100,23 @@ const Home = () => {
           </div>
         </div>
       </header>
-      <div className='text-gray mr-14 ml-14 mb-48'>
+      <div className='text-gray mx-6 xl:mr-14 xl:ml-14 mb-48'>
         <h1
           className='xl:text-[76px] text-3xl font-extrabold text-gray uppercase tracking-[-1px] xl:leading-[76px] pb-3 xl:pb-0'>
           WELCOME TO MY creative space, where i showcase my passion for design and user experience.
         </h1>
         <p className='xl:font-semibold text-gray text-sm tracking-[-0.5px] xl:w-1/2 pb-3'>
-          I’m Aleksandra, a user interface and experience designer. The projects featured here are intended to
-          demonstrate the depth of my design capabilities and the skills I honed while working with Figma. My path to
-          UX/UI began with dedicated training, perseverance and a natural artistic flair. I completed a five-year degree
-          in Architecture and Design at the Academy of Fine Arts in Gdansk, which gave me a solid foundation for my
-          creative endeavours.
+          I’m Aleksandra, a user interface and experience designer. The projects featured here showcase the depth of
+          my design capabilities and the skills I’ve honed through my work with Figma. My journey into UX/UI design
+          began with dedicated training, perseverance, and a natural artistic flair. I hold a five-year degree in
+          Architecture and Design from the Academy of Fine Arts in Gdansk, which provided a strong foundation for
+          my creative endeavors.
         </p>
         <p className='xl:font-semibold text-gray text-sm tracking-[-0.5px] xl:w-1/2 pb-3'>
-          I worked as a UX/UI Designer for 8 months. I worked on several applications, landing pages and a system
-          (Websys). I also worked for two years at SIKORA INTERIORS design office in Gdansk as an interior designer. I
-          gained a lot of experience in project management, client meetings and teamwork.
+          I have 8 months of experience as a UX/UI Designer, during which I worked on several applications,
+          landing pages, and a system called Websys. Additionally, I spent two years at SIKORA INTERIORS
+          design office in Gdansk as an interior designer. There, I gained valuable experience in project
+          management, client collaboration, and teamwork.
         </p>
         <DownloadCVButton/>
       </div>

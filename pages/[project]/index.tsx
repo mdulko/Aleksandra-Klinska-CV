@@ -30,7 +30,7 @@ const ProjectPage = ({ params }: { params: { project: string } }) => {
     {
       label: 'ABOUT',
       number: '01',
-      href: '#about',
+      href: '/',
     },
     {
       label: 'PORTFOLIO',

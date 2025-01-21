@@ -76,9 +76,9 @@ const Experience = () => {
     {
       image: '/hypertrike.png',
       title: 'hypertrike',
-      description: 'Remedycine is a preventive system. It is an app that allows not only the storage of test results, but also their sharing with relatives and the doctor during a medical visit. The user can analyse changes in his or her health with graphs showing his or her condition. ',
+      description: 'Site dedicated to the “Hypertrike” tricycle product.',
       images: ['/hypertrike_1.png'],
-      size: '56px'
+      size: '60px'
     },
     {
       image: '/storme.png',
@@ -115,7 +115,7 @@ const Experience = () => {
   return (
     <div id='portfolio' className='flex flex-col items-center'>
       <h1 className='xl:text-6xl text-3xl text-gray font-extrabold uppercase tracking-[-1px] leading-[32px] xl:leading-[86px]'>Experience</h1>
-      <ul className="flex flex-wrap justify-center text-xs text-gray uppercase mb-12 mt-6">
+      <ul className="flex flex-wrap justify-center text-xs text-gray uppercase mb-12">
         {navItems.map((item, index) => (
           <li key={item}>
             <span className='px-4'>{item}</span>
@@ -140,7 +140,7 @@ const Experience = () => {
             </div>
             <div className={`col-span-12 ${item.half ? 'xl:col-span-4' : 'xl:col-span-3'} break-words mb-16 xl:mb-32`}>
               <h1
-                className={`text-3xl ${item.size ? `xl:text-[${item.size}]` : 'xl:text-[64px]'}
+                className={`text-3xl ${item.size ? `xl:text-[56px]` : 'xl:text-[64px]'} 
                  text-gray font-extrabold uppercase tracking-[-1px] leading-[36px] 
                  xl:leading-[64px] ${hoveredIndex === index ? 'text-red' : ''}`}
               >
