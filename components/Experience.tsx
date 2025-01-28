@@ -28,8 +28,6 @@ const Experience = () => {
       description: 'Interni Studio focuses on selling ready-made interior designs along with a curated package of furniture lists. I made an attempt to create an interior design store by analysing user needs.',
       link: 'internistudio.pl',
       images: ['/internistudio_1.png', '/internistudio_2.png', "/internistudio_3.png", "/internistudio_4.png"],
-      links: ['internistudio.pl']
-
     },
     {
       image: '/remedycine.png',
@@ -47,7 +45,7 @@ const Experience = () => {
       link: 'websysystem.com',
       half: true,
       images: ['/websys_1.png', '/websys_2.png', '/websys_3.png', '/websys_4.png'],
-      links: ['websystem.com']
+      links: ['https://websys.app/account/sign-up']
     },
     {
       image: '/calendar.png',
