@@ -28,6 +28,7 @@ const Experience = () => {
       description: 'Interni Studio focuses on selling ready-made interior designs along with a curated package of furniture lists. I made an attempt to create an interior design store by analysing user needs.',
       link: 'internistudio.pl',
       images: ['/internistudio_1.png', '/internistudio_2.png', "/internistudio_3.png", "/internistudio_4.png"],
+      moreInformation: 'Private commission'
     },
     {
       image: '/remedycine.png',
@@ -36,7 +37,8 @@ const Experience = () => {
       link: 'remedycine.org',
       images: ['/remedycine_1.png', '/remedycine_2.png', '/remedycine_3.png', '/remedycine_4.png', '/remedycine_5.png'],
       size: '56px',
-      links: ['remedycine.org']
+      links: ['remedycine.org'],
+      commissionBy: 'Kacper Raubo'
     },
     {
       image: '/websys.png',
@@ -45,7 +47,8 @@ const Experience = () => {
       link: 'websysystem.com',
       half: true,
       images: ['/websys_1.png', '/websys_2.png', '/websys_3.png', '/websys_4.png'],
-      links: ['https://websys.app/account/sign-up']
+      links: ['https://websys.app/account/sign-up'],
+      commissionBy: 'Kacper Raubo'
     },
     {
       image: '/calendar.png',
@@ -53,7 +56,8 @@ const Experience = () => {
       description: 'The app allows you to create different calendars, share them with your team and family and let them book time. You can create public or private days.',
       link: 'calendar-cards.org',
       images: ['/calendar_1.png', "/calendar_2.png"],
-      links: ['calendar-cards.org']
+      links: ['calendar-cards.org'],
+      commissionBy: 'Kacper Raubo'
     },
     {
       image: '/notes.png',
@@ -62,21 +66,24 @@ const Experience = () => {
       link: '',
       images: ['/notes_1.png', "/notes_2.png", "/notes_3.png"],
       size: '60px',
-      links: ['byte-space.org', 'note-board.org']
+      links: ['byte-space.org', 'note-board.org'],
+      commissionBy: 'Kacper Raubo'
     },
     {
       image: '/supercivilian.png',
       title: 'supercivilian',
       description: 'An application with a database of all shelters in Poland and the additional possibility of creating your own evacuation plans. The user can create an evacuation plan, assign tasks to participants, add notes.',
       half: true,
-      images: ['/supercivilian_1.png', "/supercivilian_2.png"]
+      images: ['/supercivilian_1.png', "/supercivilian_2.png"],
+      commissionBy: 'Kacper Raubo'
     },
     {
       image: '/hypertrike.png',
       title: 'hypertrike',
       description: 'Site dedicated to the “Hypertrike” tricycle product.',
       images: ['/hypertrike_1.png'],
-      size: '60px'
+      size: '60px',
+      commissionBy: 'Kacper Raubo'
     },
     {
       image: '/storme.png',
@@ -166,6 +173,16 @@ const Experience = () => {
                   onClick={() => handleProjectClick(item)}
                 />
               </div>
+              {item.commissionBy &&
+                <div className='text-brown text-[12px] font-semibold pt-2'>
+                    Commissioned by <span className='text-gray'>{item.commissionBy}</span>
+                </div>
+              }
+              {item.moreInformation &&
+                <div className='text-[12px] font-semibold pt-2 text-gray'>
+                  {item.moreInformation}
+                </div>
+              }
             </div>
           </div>
         ))}
