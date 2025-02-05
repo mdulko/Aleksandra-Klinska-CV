@@ -174,12 +174,12 @@ const Experience = () => {
                 />
               </div>
               {item.commissionBy &&
-                <div className='text-brown text-[12px] font-semibold pt-2'>
+                <div className='text-brown text-[12px] font-semibold pt-6 xl:ml-1'>
                     Commissioned by <span className='text-gray'>{item.commissionBy}</span>
                 </div>
               }
               {item.moreInformation &&
-                <div className='text-[12px] font-semibold pt-2 text-gray'>
+                <div className='text-[12px] font-semibold text-gray pt-6 xl:ml-1'>
                   {item.moreInformation}
                 </div>
               }
