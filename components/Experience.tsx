@@ -12,7 +12,7 @@ interface Project {
   half?: boolean,
   images?: string[],
   size?: string,
-  links?: string[]
+  links?: { display: string; link: string; }[]
 }
 
 const Experience = () => {
@@ -37,7 +37,12 @@ const Experience = () => {
       link: 'remedycine.org',
       images: ['/remedycine_1.png', '/remedycine_2.png', '/remedycine_3.png', '/remedycine_4.png', '/remedycine_5.png'],
       size: '56px',
-      links: ['remedycine.org'],
+      links: [
+        {
+          display: 'remedycine.org',
+          link: 'https://www.figma.com/proto/iyxz5BQZ9ls9rkpWmMEJV2/REMEDYCINE?node-id=276-7293&t=i8LBtmdqo8xD0ME9-1',
+        }
+      ],
       commissionBy: 'Kacper Raubo'
     },
     {
@@ -47,7 +52,12 @@ const Experience = () => {
       link: 'websysystem.com',
       half: true,
       images: ['/websys_1.png', '/websys_2.png', '/websys_3.png', '/websys_4.png'],
-      links: ['https://websys.app/account/sign-up'],
+      links: [
+        {
+          display: 'websys.app',
+          link: 'https://websys.app/',
+        }
+      ],
       commissionBy: 'Kacper Raubo'
     },
     {
@@ -56,7 +66,12 @@ const Experience = () => {
       description: 'The app allows you to create different calendars, share them with your team and family and let them book time. You can create public or private days.',
       link: 'calendar-cards.org',
       images: ['/calendar_1.png', "/calendar_2.png"],
-      links: ['calendar-cards.org'],
+      links: [
+        {
+          display: 'calendar-cards.org',
+          link: 'https://www.figma.com/proto/KmL9DJwRRgcRNiD5DsLUfw/CALENDAR-CARDS?node-id=4-4&t=bh6h5YJeIdIP1iC0-1',
+        }
+      ],
       commissionBy: 'Kacper Raubo'
     },
     {
@@ -66,7 +81,16 @@ const Experience = () => {
       link: '',
       images: ['/notes_1.png', "/notes_2.png", "/notes_3.png"],
       size: '60px',
-      links: ['byte-space.org', 'note-board.org'],
+      links: [
+        {
+          display: 'byte-space.org',
+          link: 'https://www.figma.com/proto/LYPGQNfn5pzfWVYlzE1QZ3/ARTBOARD%2C-NOTEBOARD%2C-BYTESPACE?node-id=4-4&t=FXAMoIt91BtUpVSV-1',
+        },
+        {
+          display: 'note-board.org',
+          link: 'https://www.figma.com/proto/LYPGQNfn5pzfWVYlzE1QZ3/ARTBOARD%2C-NOTEBOARD%2C-BYTESPACE?node-id=4-4&t=FXAMoIt91BtUpVSV-1',
+        },
+      ],
       commissionBy: 'Kacper Raubo'
     },
     {
@@ -75,6 +99,12 @@ const Experience = () => {
       description: 'An application with a database of all shelters in Poland and the additional possibility of creating your own evacuation plans. The user can create an evacuation plan, assign tasks to participants, add notes.',
       half: true,
       images: ['/supercivilian_1.png', "/supercivilian_2.png"],
+      links: [
+        {
+          display: 'In progress',
+          link: 'https://www.figma.com/design/D1qxRP1pySrZNaS69hF09p/SUPERCIVILIAN?node-id=11-2&t=zdRH1ND6FxvrxycZ-1',
+        }
+      ],
       commissionBy: 'Kacper Raubo'
     },
     {
@@ -135,7 +165,7 @@ const Experience = () => {
           <div key={index} className='grid grid-cols-12 mx-6 xl:mx-0 xl:mr-14'>
             <div className={`col-span-12 ${item.half ? 'xl:col-span-5' : 'xl:col-span-9'}`}>
               <Image
-                src={`/Aleksandra-Klinska-CV${item.image}`}
+                src={`${item.image}`}
                 alt={item.title}
                 width={10000}
                 height={10000}
@@ -155,11 +185,11 @@ const Experience = () => {
               {item.links ? item.links.map((link, index) => (
                 <p key={index} className='leading-[14px]'>
                   <Link
-                    href={`https://${link}`}
+                    href={link.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className='text-gray text-xs underline xl:ml-1 leading-[4px]'>
-                    {link}
+                    {link.display}
                   </Link>
                 </p>
                   )) :

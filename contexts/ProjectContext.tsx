@@ -7,7 +7,7 @@ interface Project {
   half?: boolean,
   images?: string[],
   size?: string,
-  links?: string[]
+  links?: { display: string; link: string; }[]
 }
 
 interface ProjectContextType {

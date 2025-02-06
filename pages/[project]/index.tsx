@@ -58,11 +58,11 @@ const ProjectPage = ({ params }: { params: { project: string } }) => {
             {selectedProject.links ? selectedProject.links.map((link, index) => (
                 <p key={index} className='leading-[14px]'>
                   <Link
-                    href={`https://${link}`}
+                    href={link.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className='text-gray text-xs underline leading-[4px]'>
-                    {link}
+                    {link.display}
                   </Link>
                 </p>
               )) :
