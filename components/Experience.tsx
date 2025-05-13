@@ -40,7 +40,7 @@ const Experience = () => {
       links: [
         {
           display: 'remedycine.org',
-          link: 'https://www.figma.com/proto/iyxz5BQZ9ls9rkpWmMEJV2/REMEDYCINE?node-id=276-7293&t=i8LBtmdqo8xD0ME9-1',
+          link: 'https://remedycine.org/',
         }
       ],
       commissionBy: 'Kacper Raubo'
@@ -69,7 +69,7 @@ const Experience = () => {
       links: [
         {
           display: 'calendar-cards.org',
-          link: 'https://www.figma.com/proto/KmL9DJwRRgcRNiD5DsLUfw/CALENDAR-CARDS?node-id=4-4&t=bh6h5YJeIdIP1iC0-1',
+          link: 'https://calendar-cards.app/',
         }
       ],
       commissionBy: 'Kacper Raubo'
@@ -84,11 +84,11 @@ const Experience = () => {
       links: [
         {
           display: 'byte-space.org',
-          link: 'https://www.figma.com/proto/LYPGQNfn5pzfWVYlzE1QZ3/ARTBOARD%2C-NOTEBOARD%2C-BYTESPACE?node-id=4-4&t=FXAMoIt91BtUpVSV-1',
+          link: 'https://byte-space.app/accounts/sign-in',
         },
         {
           display: 'note-board.org',
-          link: 'https://www.figma.com/proto/LYPGQNfn5pzfWVYlzE1QZ3/ARTBOARD%2C-NOTEBOARD%2C-BYTESPACE?node-id=4-4&t=FXAMoIt91BtUpVSV-1',
+          link: 'https://note-board.app/',
         },
       ],
       commissionBy: 'Kacper Raubo'
@@ -101,8 +101,8 @@ const Experience = () => {
       images: ['/supercivilian_1.png', "/supercivilian_2.png"],
       links: [
         {
-          display: 'In progress',
-          link: 'https://www.figma.com/design/D1qxRP1pySrZNaS69hF09p/SUPERCIVILIAN?node-id=11-2&t=zdRH1ND6FxvrxycZ-1',
+          display: 'supercivilian.app',
+          link: 'https://supercivilian.app/',
         }
       ],
       commissionBy: 'Kacper Raubo'
